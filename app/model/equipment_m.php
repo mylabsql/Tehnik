@@ -42,7 +42,7 @@ class equ01 extends msDB { //class Hwd dengan extend/parameter msDB//
                     'name'  => 'model',
                     'meta' => array(
                       'st' => array('type' => 'string', 'allowBlank' => true), 
-                      'cm' => array('header' => 'Model','width' => 100,'sortable' => true),
+                      'cm' => array('header' => 'Model','width' => 175,'sortable' => true),
                       'filter' => array('type' => 'string')
 			)
                 ));
