@@ -1,0 +1,49 @@
+[29-Jan-2012 00:00:39] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/crew_activity_m.php on line 329
+[29-Jan-2012 00:00:39] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/crew_activity_m.php on line 334
+[29-Jan-2012 00:01:05] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/crew_activity_m.php on line 329
+[29-Jan-2012 00:01:05] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/crew_activity_m.php on line 334
+[29-Jan-2012 00:01:15] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/crew_activity_m.php on line 329
+[29-Jan-2012 00:01:15] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/crew_activity_m.php on line 334
+[29-Jan-2012 00:01:35] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/crew_activity_m.php on line 329
+[29-Jan-2012 00:01:35] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/crew_activity_m.php on line 334
+[29-Jan-2012 00:01:43] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/crew_activity_m.php on line 329
+[29-Jan-2012 00:01:43] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/crew_activity_m.php on line 334
+[29-Jan-2012 00:04:01] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/activity_m.php on line 205
+[29-Jan-2012 00:04:01] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/activity_m.php on line 210
+[29-Jan-2012 00:05:59] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/activity_m.php on line 205
+[29-Jan-2012 00:05:59] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/activity_m.php on line 210
+[29-Jan-2012 00:06:18] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/crew_activity_m.php on line 329
+[29-Jan-2012 00:06:18] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/crew_activity_m.php on line 334
+[29-Jan-2012 00:12:55] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/activity_m.php on line 205
+[29-Jan-2012 00:12:55] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/activity_m.php on line 210
+[29-Jan-2012 00:13:04] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/crew_activity_m.php on line 329
+[29-Jan-2012 00:13:04] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/crew_activity_m.php on line 334
+[29-Jan-2012 00:26:57] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/crew_activity_m.php on line 329
+[29-Jan-2012 00:26:57] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/crew_activity_m.php on line 334
+[29-Jan-2012 00:30:11] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/crew_activity_m.php on line 329
+[29-Jan-2012 00:30:11] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/crew_activity_m.php on line 334
+[29-Jan-2012 00:40:29] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/activity_m.php on line 205
+[29-Jan-2012 00:40:29] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/activity_m.php on line 210
+[29-Jan-2012 00:40:35] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/crew_activity_m.php on line 329
+[29-Jan-2012 00:40:35] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/crew_activity_m.php on line 334
+[29-Jan-2012 00:48:00] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/activity_m.php on line 205
+[29-Jan-2012 00:48:00] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/mylabsql/public_html/extjs/app/model/activity_m.php on line 210
+[29-Jan-2012 13:28:50] PHP Fatal error:  Class 'Acara' not found in /home/mylabsql/public_html/extjs/app/controller/event_pjt_c.php on line 4
+[29-Jan-2012 13:28:51] PHP Fatal error:  Class 'Acara' not found in /home/mylabsql/public_html/extjs/app/controller/event_pjt_c.php on line 4
+[29-Jan-2012 13:28:51] PHP Fatal error:  Class 'Acara' not found in /home/mylabsql/public_html/extjs/app/controller/event_pjt_c.php on line 4
+[29-Jan-2012 13:28:58] PHP Fatal error:  Class 'Acara' not found in /home/mylabsql/public_html/extjs/app/controller/event_pjt_c.php on line 4
+[29-Jan-2012 13:29:07] PHP Fatal error:  Class 'Acara' not found in /home/mylabsql/public_html/extjs/app/controller/event_pjt_c.php on line 4
+[29-Jan-2012 13:57:57] PHP Fatal error:  Class 'Acara' not found in /home/mylabsql/public_html/extjs/app/controller/event_pjt_c.php on line 4
+[29-Jan-2012 13:57:57] PHP Fatal error:  Class 'Acara' not found in /home/mylabsql/public_html/extjs/app/controller/event_pjt_c.php on line 4
+[29-Jan-2012 13:57:57] PHP Fatal error:  Class 'Acara' not found in /home/mylabsql/public_html/extjs/app/controller/event_pjt_c.php on line 4
+[29-Jan-2012 13:58:06] PHP Fatal error:  Class 'Acara' not found in /home/mylabsql/public_html/extjs/app/controller/event_pjt_c.php on line 4
+[29-Jan-2012 13:58:28] PHP Fatal error:  Class 'Acara' not found in /home/mylabsql/public_html/extjs/app/controller/event_pjt_c.php on line 4
+[29-Jan-2012 13:58:47] PHP Fatal error:  Class 'Acara' not found in /home/mylabsql/public_html/extjs/app/controller/event_pjt_c.php on line 4
+[29-Jan-2012 16:16:59] PHP Fatal error:  Class 'Acara' not found in /home/mylabsql/public_html/extjs/app/controller/event_pjt_c.php on line 4
+[29-Jan-2012 16:16:59] PHP Fatal error:  Class 'Acara' not found in /home/mylabsql/public_html/extjs/app/controller/event_pjt_c.php on line 4
+[29-Jan-2012 16:16:59] PHP Fatal error:  Class 'Acara' not found in /home/mylabsql/public_html/extjs/app/controller/event_pjt_c.php on line 4
+[29-Jan-2012 16:21:30] PHP Fatal error:  Class 'Acara' not found in /home/mylabsql/public_html/extjs/app/controller/event_pjt_c.php on line 4
+[29-Jan-2012 16:40:16] PHP Warning:  Invalid argument supplied for foreach() in /home/mylabsql/public_html/extjs/class/class.grid.php on line 284
+[01-Feb-2012 09:22:10] PHP Fatal error:  Class 'Acara' not found in /home/mylabsql/public_html/extjs/app/controller/event_pjt_c.php on line 4
+[01-Feb-2012 09:22:10] PHP Fatal error:  Class 'Acara' not found in /home/mylabsql/public_html/extjs/app/controller/event_pjt_c.php on line 4
+[01-Feb-2012 09:22:10] PHP Fatal error:  Class 'Acara' not found in /home/mylabsql/public_html/extjs/app/controller/event_pjt_c.php on line 4
