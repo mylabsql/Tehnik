@@ -15,7 +15,8 @@ var dynamic_grid_lap_equ09 = new Ext.ux.DynamicGridPanel({
     sortInfo:{field:['kategori'], direction:'ASC'}, //must declaration
     groupField:'eq_nama.id',
     baseParams:{
-      action:'read'
+      action:'read',
+      blimit:', nama'
     },
     tbar:[
     '-',{
