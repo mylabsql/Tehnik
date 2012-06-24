@@ -89,7 +89,9 @@ var dynamic_grid_reg_eq01 = new Ext.ux.DynamicGroupingGrid({
     tbarDisable:{  //if not declaration default is true
       add:!ROLE.ADD_DATA,
       edit:!ROLE.EDIT_DATA,
-      remove:!ROLE.REMOVE_DATA
+      remove:!ROLE.REMOVE_DATA,
+      lock:!ROLE.LOCK_DATA
+
     },
    
     onAddData:function(bt){
