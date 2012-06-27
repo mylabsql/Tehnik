@@ -40,6 +40,7 @@ var cmbgrup08 = new Ext.form.ComboBox(
 	editable: true,
 	autocomplete: true,
 	forceSelection : true,
+	width:250,
 	pageSize : 100
 	      });
 cmbgrup08.on("select", function() {
