@@ -507,7 +507,7 @@ if(mysql_num_rows($rsData)>0){
 		$data = Array();                
                 $start=$request['start'];
                 $limit=$request['limit'];
-		$sql = "select id, nama from eq_nama where grup=0 limit $start,$limit";
+		$sql = "select id, nama from eq_nama limit $start,$limit";
 		$rsData = mysql_query($sql); 
 if(mysql_num_rows($rsData)>0){
       while($rows = mysql_fetch_array($rsData))
