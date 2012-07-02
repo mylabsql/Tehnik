@@ -3,7 +3,7 @@ Ext.ux.DynamicGroupingGrid = Ext.extend(Ext.grid.GridPanel, {
     autoLoadStore: true,
     blimit:"",
     start: 0,
-    limit: 25,
+    limit: 50,
     remoteSort: false,
     hiddenCombo: false,
     localFilter: false,
@@ -227,7 +227,7 @@ Ext.ux.DynamicGroupingGrid = Ext.extend(Ext.grid.GridPanel, {
             valueField: 'limit',
             store: new Ext.data.SimpleStore({
                 fields: ['limit'],
-                data: [[25], [50], [100]]
+                data: [[50], [100], [1000]]
             }),
             listeners: {
                 render: function (cmb) {
