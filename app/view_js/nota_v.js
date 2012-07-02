@@ -248,7 +248,7 @@ equ_editor02 = Ext.extend(Ext.grid.EditorGridPanel, {
                 header: 'Nama equipment',
                 hidden:false,
                 sortable: true,
-		width: 200,
+		width: 250,
 		editor: new Ext.grid.GridEditor(cmbEqu02),
 		renderer: function(val){
 						index = dsEquipment02.findExact('id',val); 
