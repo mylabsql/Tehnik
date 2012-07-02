@@ -22,7 +22,7 @@ var dstrans05 = new Ext.data.JsonStore({
     dstrans05.load({
 	params:{
 		start:0,
-		limit:25
+		limit:1000
 	}
 });
 
@@ -44,7 +44,7 @@ var cmbTrans05 = new Ext.form.ComboBox(
 	hideTrigger: false, //SEMBUNYIKAN BUTTON COMBO?
 	forceSelection : true,
 	allowBlank: false,
-	pageSize: 25,
+	pageSize: 1000,
 	      });
 }
 
