@@ -180,7 +180,7 @@ class Listnotagrup extends msDB {
                     'name' => 'eq_nama',
                     'meta' => array(
                       'st' => array('type' => 'string'), 
-                      'cm' => array('header' => 'Nama equipment', 'width' => 175, 'sortable' => true)
+                      'cm' => array('header' => 'Nama equipment', 'width' => 250, 'sortable' => true)
                     )
                   )
                 );
@@ -220,7 +220,7 @@ class Listnotagrup extends msDB {
                     'name' => 'kategori',
                     'meta' => array(
                       'st' => array('type' => 'string'), 
-                      'cm' => array('header' => 'Kategori', 'width' => 175, 'sortable' => true)
+                      'cm' => array('header' => 'Kategori', 'width' => 125, 'sortable' => true)
                     )
                   )
                 );    
@@ -230,7 +230,7 @@ class Listnotagrup extends msDB {
                     'name' => 'eq_nama',
                     'meta' => array(
                       'st' => array('type' => 'string'), 
-                      'cm' => array('header' => 'Nama equipment', 'width' => 175, 'sortable' => true)
+                      'cm' => array('header' => 'Nama equipment', 'width' => 250, 'sortable' => true)
                     )
                   )
                 );
