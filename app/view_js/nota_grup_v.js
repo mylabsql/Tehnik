@@ -226,7 +226,7 @@ grup_editor05 = Ext.extend(Ext.grid.EditorGridPanel, {
                 header: 'Nama equipment',
                 hidden:false,
                 sortable: true,
-		width: 200,
+		width: 250,
 		editor: new Ext.grid.GridEditor(cmbGrup05),
 		renderer: function(val){
 						index = dsGrup05.findExact('id',val); 
