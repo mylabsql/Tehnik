@@ -68,7 +68,7 @@ var dsEquipment02 = new Ext.data.JsonStore({
     dsEquipment02.load({
 	params:{
 		start:0,
-		limit:25
+		limit:1000
 	}
 });
 
@@ -89,7 +89,7 @@ var cmbEqu02 = new Ext.form.ComboBox(
 	autocomplete: true,
 	forceSelection : true,
 	allowBlank: false,
-	pageSize: 25
+	pageSize: 1000
 	      });
 }
 
