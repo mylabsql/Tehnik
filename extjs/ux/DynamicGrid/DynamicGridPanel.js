@@ -1,7 +1,7 @@
 Ext.ux.DynamicGridPanel = Ext.extend(Ext.grid.GridPanel, {
     autoLoadStore: true,
     start: 0,
-    limit: 25,
+    limit: 50,
     remoteSort: true,
     forceFit:false,
     sortInfo: { field: '', direction: '' },
@@ -114,7 +114,7 @@ Ext.ux.DynamicGridPanel = Ext.extend(Ext.grid.GridPanel, {
         valueField : 'limit',
         store:new Ext.data.SimpleStore({
           fields : ['limit'],
-          data : [[25], [50], [100]]
+          data : [[50], [100], [1000]]
         }),
         listeners:{
            render:function(cmb){
