@@ -474,7 +474,7 @@ class Listnotagrup extends msDB {
 		$data = Array();
                 $start=$request['start'];
                 $limit=$request['limit'];
-		$sql = "select id, nama_trans from trans where grup=1 order by nama limit $start,$limit";
+		$sql = "select id, nama_trans from trans where grup=1 order by nama_trans limit $start,$limit";
 		$rsData = mysql_query($sql); 
 if(mysql_num_rows($rsData)>0){
       while($rows = mysql_fetch_array($rsData))
