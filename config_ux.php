@@ -26,6 +26,13 @@ $ux_js[] = "DynamicGrid/ExtPhpDynamicGridPanel.js";
 $ux_js[] = "DynamicGrid/DynamicEditorGrid.js"; 
 $ux_js[] = "DynamicGrid/DynamicEditorGridTbar.js"; 
 $ux_js[] = "DynamicGrid/DynamicGroupingGrid.js"; 
+$ux_js[] = "SearchField.js"; 
+$ux_js[] = "treegrid/TreeGridSorter.js"; 
+$ux_js[] = "treegrid/TreeGridColumnResizer.js"; 
+$ux_js[] = "treegrid/TreeGridNodeUI.js"; 
+$ux_js[] = "treegrid/TreeGridLoader.js"; 
+$ux_js[] = "treegrid/TreeGrid.js"; 
+$ux_js[] = "treegrid/TreeGridColumns.js";
 
 //load css file in folder extjs/ux/
 $ux_css = Array();
