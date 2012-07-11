@@ -42,7 +42,7 @@ class equ01 extends msDB { //class Hwd dengan extend/parameter msDB//
                     'name'  => 'model',
                     'meta' => array(
                       'st' => array('type' => 'string', 'allowBlank' => true), 
-                      'cm' => array('header' => 'Model','width' => 175,'sortable' => true),
+                      'cm' => array('header' => 'Model','width' => 100,'sortable' => true),
                       'filter' => array('type' => 'string')
 			)
                 ));
@@ -64,6 +64,16 @@ class equ01 extends msDB { //class Hwd dengan extend/parameter msDB//
                       'st' => array('type' => 'int', 'allowBlank' => true), 
                       'cm' => array('header' => 'Daya','width' => 50,'sortable' => true),
                       'filter' => array('type' => 'int')
+			)
+                ));
+		$this->grid->addField(
+                array(
+                    'field' => 'partno',
+                    'name'  => 'partno',
+                    'meta' => array(
+                      'st' => array('type' => 'string', 'allowBlank' => true), 
+                      'cm' => array('header' => 'Partno','width' => 100,'sortable' => true),
+                      'filter' => array('type' => 'string')
 			)
                 ));
 		$this->grid->addField(
@@ -94,6 +104,7 @@ class equ01 extends msDB { //class Hwd dengan extend/parameter msDB//
 	  'model' => $request['model'],
 	  'merk' => $request['merk'],
 	  'daya' => $request['daya'],
+	  'partno' => $request['partno'],
           'keterangan' => $request['keterangan'],
 	  'admin' => $request['usr_id']
         );                
@@ -107,6 +118,7 @@ class equ01 extends msDB { //class Hwd dengan extend/parameter msDB//
     }
     
     function read($request){ // fungsi memabaca + return data //
+	$thisfilter=$request['thisfilter'];
         $eq_edit = new Grid;
         $eq_edit->setTable('equipment');	
         $eq_edit->setJoin('inner join eq_nama on eq_nama.id=equipment.nama_id');
@@ -120,7 +132,7 @@ class equ01 extends msDB { //class Hwd dengan extend/parameter msDB//
                       'cm' => array('hidden' => true, 'hideable' => false, 'menuDisabled' => true)
                     )
                 ));		
-		$eq_edit->addField(
+		/*$eq_edit->addField(
                 array(
                     'field' => 'eq_nama.kategori',
                     'name'  => 'kategori',
@@ -129,7 +141,7 @@ class equ01 extends msDB { //class Hwd dengan extend/parameter msDB//
                       'cm' => array('header' => 'Kategori','width' => 125,'sortable' => true),
                       'filter' => array('type' => 'string')
 			)
-                ));
+                ));*/
 		$eq_edit->addField(
                 array(
                     'field' => 'eq_nama.nama',
@@ -172,6 +184,16 @@ class equ01 extends msDB { //class Hwd dengan extend/parameter msDB//
                 ));
 		$eq_edit->addField(
                 array(
+                    'field' => 'partno',
+                    'name'  => 'partno',
+                    'meta' => array(
+                      'st' => array('type' => 'string', 'allowBlank' => true), 
+                      'cm' => array('header' => 'Partno','width' => 100,'sortable' => true),
+                      'filter' => array('type' => 'string')
+			)
+                ));
+		$eq_edit->addField(
+                array(
                     'field' => 'daya',
                     'name'  => 'daya',
                     'meta' => array(
@@ -198,7 +220,8 @@ class equ01 extends msDB { //class Hwd dengan extend/parameter msDB//
                       'cm' => array('header' => 'Keterangan', 'width' => 500, 'sortable' => true)
                     )                  
                   )
-                );  
+                );
+		 $eq_edit->setManualFilter(" and eq_nama.kategori = '$thisfilter'"); 
        return $eq_edit->doRead($request); 
 
     }
@@ -209,6 +232,7 @@ class equ01 extends msDB { //class Hwd dengan extend/parameter msDB//
 	  'sn' => $request['sn'],
 	  'model' => $request['model'],
 	  'merk' => $request['merk'],
+	  'partno' => $request['partno'],
 	  'daya' => $request['daya'],
           'keterangan' => $request['keterangan'],
 	  'admin' => $request['usr_id']
@@ -224,8 +248,8 @@ class equ01 extends msDB { //class Hwd dengan extend/parameter msDB//
         return $this->grid->doDestroy($request);
     }
     function getcmbnama01($request){
-
-		$sql = "select count(*) from eq_nama"; 
+		$thisfilter=$request['thisfilter'];
+		$sql = "select count(*) from eq_nama where  kategori='$thisfilter'"; 
 		$data = array();
 		$rsTotal = mysql_query($sql); 
       while($rows = mysql_fetch_array($rsTotal))
@@ -233,7 +257,7 @@ class equ01 extends msDB { //class Hwd dengan extend/parameter msDB//
 		$data = Array();
 		$start=$request['start'];
                 $limit=$request['limit'];
-		$sql = "select id, nama from eq_nama order by nama limit $start,$limit";
+		$sql = "select id, nama from eq_nama  where kategori='$thisfilter' order by nama limit $start,$limit";
 		$rsData = mysql_query($sql); 
 if(mysql_num_rows($rsData)>0){
       while($rows = mysql_fetch_array($rsData))

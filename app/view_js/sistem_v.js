@@ -1,17 +1,17 @@
 valid_script = true;  
-equ_ajax_url = 'ajax.handler.php?id=' + page;  
+sistem_ajax_url = 'ajax.handler.php?id=' + page;  
 
 function reportSelect(bt){
-  dynamic_grid_reg_equ01.getTopToolbar().get(8).setText(bt.text); 
-  dynamic_grid_reg_equ01.getTopToolbar().get(8).mode = bt.mode;   
+  dynamic_grid_reg_sistem01.getTopToolbar().get(8).setText(bt.text); 
+  dynamic_grid_reg_sistem01.getTopToolbar().get(8).mode = bt.mode;   
 }
-var dsequ01 = new Ext.data.JsonStore({
-	id:dsequ01,
-	url:equ_ajax_url,
+var dssistem01 = new Ext.data.JsonStore({
+	id:dssistem01,
+	url:sistem_ajax_url,
 	totalProperty:'total',
 	baseParams:{
 		action:'getcmbnama01',
-		thisfilter:'equipment'
+		thisfilter:'Sistem'
 	},
 	sortInfo:{
 		field:'nama',
@@ -22,24 +22,24 @@ var dsequ01 = new Ext.data.JsonStore({
 	fields: [{name:'id'},{ name:'nama'}]
 });
 
-    dsequ01.load({
+    dssistem01.load({
 	params:{
 		start:0,
 		limit:100
 	}
 });
 
-var cmbequ01 = new Ext.form.ComboBox(
+var cmbsistem01 = new Ext.form.ComboBox(
 {	
 	anchor:'100%',
-	store:dsequ01,
+	store:dssistem01,
 	//name:'id',
 	valueField: 'id',
 	displayField: 'nama',
 	hiddenValue : 'id',
 	hiddenName : 'nama_id',
-	fieldLabel: 'Nama equipment',
-	emptyText : 'Nama equipment...',
+	fieldLabel: 'Nama sistem',
+	emptyText : 'Nama sistem...',
 	triggerAction: 'all',
 	mode: 'remote',
 	editable: true,
@@ -48,16 +48,16 @@ var cmbequ01 = new Ext.form.ComboBox(
 	pageSize : 100
 	      });
 
-var dynamic_grid_reg_equ01 = new Ext.ux.DynamicGroupingGrid({
+var dynamic_grid_reg_sistem01 = new Ext.ux.DynamicGroupingGrid({
     border:false,
     remoteSort:true, //optional default true
     autoLoadStore:true, //optional default true
-    storeUrl:equ_ajax_url,
+    storeUrl:sistem_ajax_url,
     groupTpl:'[{text} ({[values.rs.length]} {[values.rs.length > 1 ? "Items" : "Item"]})]',
     sortInfo:{field:'nama_id',direction:'ASC'}, //must declaration
     baseParams:{
       action:'read',
-      thisfilter:'equipment'
+      thisfilter:'sistem'
     },
     tbar:[
     '-',{
@@ -74,12 +74,12 @@ var dynamic_grid_reg_equ01 = new Ext.ux.DynamicGroupingGrid({
       iconCls:'report-mode',
       mode:'pdf',
       handler:function(){
-        options = dynamic_grid_reg_equ01.getParamsFilter();
+        options = dynamic_grid_reg_sistem01.getParamsFilter();
         report_link = 'report.php?id=' + page;
         options = Ext.apply(options,{mode:this.mode}); 
         winReport({
             id : this.id,
-            title : 'Informasi Nama equipment',
+            title : 'Informasi Nama sistem',
             url : report_link,
             type : this.mode,
             params:options        
@@ -95,14 +95,14 @@ var dynamic_grid_reg_equ01 = new Ext.ux.DynamicGroupingGrid({
     },
    
     onAddData:function(bt){
-      Ext.getCmp('win_equ01').getForm().reset();
-      win_reg_equ01.setTitle('Registrasi equipment'); 
-      win_reg_equ01.show(bt.id); 
+      Ext.getCmp('win_sistem01').getForm().reset();
+      win_reg_sistem01.setTitle('Registrasi sistem'); 
+      win_reg_sistem01.show(bt.id); 
     },
     onEditData:function(bt,rec){
-      win_reg_equ01.setTitle('Ubah informasi equipment');
-      win_reg_equ01.show(bt.id); 
-      Ext.getCmp('win_equ01').getForm().load({
+      win_reg_sistem01.setTitle('Ubah informasi sistem');
+      win_reg_sistem01.show(bt.id); 
+      Ext.getCmp('win_sistem01').getForm().load({
           waitMsg:'Loading Data..',
           params:{action:'edit',id:rec.data.id}
       }); 
@@ -113,7 +113,7 @@ var dynamic_grid_reg_equ01 = new Ext.ux.DynamicGroupingGrid({
         data.push(r.data.id); 
       }); 
       Ext.Ajax.request({
-        url: equ_ajax_url, 
+        url: sistem_ajax_url, 
         params:{
           action:'destroy',
           data:data.join(",")
@@ -128,8 +128,8 @@ var dynamic_grid_reg_equ01 = new Ext.ux.DynamicGroupingGrid({
 
 
 /**form edit dan form add **/ 
-var win_equ01 = {
-    id: 'win_equ01',
+var win_sistem01 = {
+    id: 'win_sistem01',
     xtype:'form',
     region: 'center',
     labelAlign:'left',
@@ -139,14 +139,14 @@ var win_equ01 = {
     bodyStyle:'padding: 10 0 0 10; background: url('+ Ext.BLANK_IMAGE_URL +');',
     defaultType:'textfield',
     waitMsgTarget: true,
-    url:equ_ajax_url,
+    url:sistem_ajax_url,
     defaults:{
       anchor:'97%',
       labelSeparator:''
     },
     items:[
 	{xtype:'hidden', name:'id'},
-	cmbequ01,
+	cmbsistem01,
 	{xtype:'textfield', name:'sn',fieldLabel:'Nomer seri',allowBlank:false},
 	{xtype:'textfield', name:'model',fieldLabel:'Model',allowBlank:false},
 	{xtype:'textfield', name:'merk',fieldLabel:'Merek',allowBlank:false},
@@ -173,8 +173,8 @@ var userPic = {
 
 };
 
-win_reg_equ01 = new Ext.Window({
-	id:'win-reg-equ01',
+win_reg_sistem01 = new Ext.Window({
+	id:'win-reg-sistem01',
 	iconCls:n.attributes.iconCls,
         layoutConfig: {
     	padding:'5',
@@ -189,25 +189,25 @@ win_reg_equ01 = new Ext.Window({
   modal: true,
   plain:true,
   frame:true,
-  items:[userPic,win_equ01],
+  items:[userPic,win_sistem01],
   buttons:[
   {
     text:'Save',
     handler:function()
-    {	if(!Ext.getCmp('win_equ01').getForm().isValid()){
+    {	if(!Ext.getCmp('win_sistem01').getForm().isValid()){
         Ext.example.msg('Peringatan','Ada data yang kosong'); 
       }
       
-      id_data = Ext.getCmp('win_equ01').getForm().getValues().id; 
+      id_data = Ext.getCmp('win_sistem01').getForm().getValues().id; 
       action = (id_data?'update':'create'); 
-      Ext.getCmp('win_equ01').getForm().submit({
-          params:{action:action,thisfilter:'equipment',
+      Ext.getCmp('win_sistem01').getForm().submit({
+          params:{action:action,thisfilter:'sistem',
 	  usr_id:userid},
           waitMsg : 'Saving Data',
           success:function(){
-            win_reg_equ01.hide();
+            win_reg_sistem01.hide();
             Ext.example.msg('Simpan','Data telah disimpan'); 
-            dynamic_grid_reg_equ01.store.reload(); 
+            dynamic_grid_reg_sistem01.store.reload(); 
           },
         failure:function(form,action){          
 	         switch (action.failureType) {
@@ -229,7 +229,7 @@ win_reg_equ01 = new Ext.Window({
   },{
     text:'Close',
     handler:function(){
-      win_reg_equ01.hide(); 
+      win_reg_sistem01.hide(); 
     }
   }
   ]
@@ -242,10 +242,10 @@ var main_content = {
   id : id_panel,  
   title:n.text,  
   iconCls:n.attributes.iconCls,  
-  items : [dynamic_grid_reg_equ01],
+  items : [dynamic_grid_reg_sistem01],
   listeners:{
     destroy:function(){
-      my_win = Ext.getCmp('win-reg-equ01');
+      my_win = Ext.getCmp('win-reg-sistem01');
       if (my_win)
           my_win.destroy(); 
     }
