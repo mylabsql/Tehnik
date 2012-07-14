@@ -7,7 +7,7 @@ function reportSelect(bt){
 }
 var kategori01 = new Ext.data.SimpleStore({
 	fields : ['kat01'],
-	data : [['Video'],['Audio'],['ME'],['Mikrolink'],['System']]
+	data : [['Equipment'],['Sparepart'],['Grup'],['Sistem']]
 		// from states.js
 	});
 
