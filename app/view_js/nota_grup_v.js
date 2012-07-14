@@ -22,7 +22,7 @@ var dstrans05 = new Ext.data.JsonStore({
     dstrans05.load({
 	params:{
 		start:0,
-		limit:1000
+		limit:25
 	}
 });
 
@@ -44,7 +44,7 @@ var cmbTrans05 = new Ext.form.ComboBox(
 	hideTrigger: false, //SEMBUNYIKAN BUTTON COMBO?
 	forceSelection : true,
 	allowBlank: false,
-	pageSize: 1000,
+	pageSize: 25,
 	      });
 }
 
@@ -68,7 +68,7 @@ var dsGrup05 = new Ext.data.JsonStore({
     dsGrup05.load({
 	params:{
 		start:0,
-		limit:25
+		limit:1000
 	}
 });
 
@@ -89,7 +89,7 @@ var cmbGrup05 = new Ext.form.ComboBox(
 	autocomplete: true,
 	forceSelection : true,
 	allowBlank: false,
-	pageSize: 25
+	pageSize: 1000
 	      });
 }
 
@@ -128,8 +128,8 @@ var cmbEventsitem05 = new Ext.form.ComboBox(
 	displayField: 'grup',
 	hiddenValue : 'id',
 	hiddenName : 'event_id',
-	fieldLabel: 'Nama grup',
-	emptyText : 'Pilih grup...',
+	fieldLabel: 'Nama sistem',
+	emptyText : 'Pilih sistem...',
 	triggerAction: 'all',
 	mode: 'remote',
 	editable: true,
@@ -226,7 +226,7 @@ grup_editor05 = Ext.extend(Ext.grid.EditorGridPanel, {
                 header: 'Nama equipment',
                 hidden:false,
                 sortable: true,
-		width: 250,
+		width: 200,
 		editor: new Ext.grid.GridEditor(cmbGrup05),
 		renderer: function(val){
 						index = dsGrup05.findExact('id',val); 
@@ -301,7 +301,7 @@ grup_editor05 = Ext.extend(Ext.grid.EditorGridPanel, {
 });
 
 notagrup_form05 = Ext.extend(Ext.Window, {
-    title: 'Form Draft Perubahan Sistem',
+    title: 'Nota Perubahan Sistem',
     width: 530,
     height: 459,
     layout: 'border',
@@ -463,7 +463,7 @@ win_notagrup_form05 = new notagrup_form05({
 //Form utama => List Jadwal Acara & List Activity crew 
 {
 var list_notagrup05 = new Ext.ux.DynamicGroupingGrid({
-    title:'Form Draft Perubahan Sistem', 
+    title:'Nota Perubahan Sistem', 
     region:'center', 
     border:false,
  //   groupField:'event_id', // select the field for grouping  
@@ -485,7 +485,7 @@ var list_notagrup05 = new Ext.ux.DynamicGroupingGrid({
     },
     tbar: ['->',' Periode waktu: ',cmbbulan05],
     onAddData:function(bt){
-      win_notagrup_form05.setTitle('Form draft perangkat siaran');
+      win_notagrup_form05.setTitle('Nota Perubahaan Sistem');
       win_notagrup_form05.show(bt.id);    
       win_notagrup_form05.onAddData(); 
    },
