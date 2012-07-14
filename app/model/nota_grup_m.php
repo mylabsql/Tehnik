@@ -180,7 +180,7 @@ class Listnotagrup extends msDB {
                     'name' => 'eq_nama',
                     'meta' => array(
                       'st' => array('type' => 'string'), 
-                      'cm' => array('header' => 'Nama equipment', 'width' => 250, 'sortable' => true)
+                      'cm' => array('header' => 'Nama equipment', 'width' => 175, 'sortable' => true)
                     )
                   )
                 );
@@ -220,7 +220,7 @@ class Listnotagrup extends msDB {
                     'name' => 'kategori',
                     'meta' => array(
                       'st' => array('type' => 'string'), 
-                      'cm' => array('header' => 'Kategori', 'width' => 125, 'sortable' => true)
+                      'cm' => array('header' => 'Kategori', 'width' => 175, 'sortable' => true)
                     )
                   )
                 );    
@@ -230,7 +230,7 @@ class Listnotagrup extends msDB {
                     'name' => 'eq_nama',
                     'meta' => array(
                       'st' => array('type' => 'string'), 
-                      'cm' => array('header' => 'Nama equipment', 'width' => 250, 'sortable' => true)
+                      'cm' => array('header' => 'Nama equipment', 'width' => 175, 'sortable' => true)
                     )
                   )
                 );
@@ -474,7 +474,7 @@ class Listnotagrup extends msDB {
 		$data = Array();
                 $start=$request['start'];
                 $limit=$request['limit'];
-		$sql = "select id, nama_trans from trans where grup=1 order by nama_trans limit $start,$limit";
+		$sql = "select id, nama_trans from trans where grup=1 limit $start,$limit";
 		$rsData = mysql_query($sql); 
 if(mysql_num_rows($rsData)>0){
       while($rows = mysql_fetch_array($rsData))
@@ -499,7 +499,7 @@ if(mysql_num_rows($rsData)>0){
 }
  function getcmbgrup05($request){
 
-		$sql = "select count(*) from eq_nama"; 
+		$sql = "select count(*) from eq_nama where kategori != 'Sistem'"; 
 		$data = array();
 		$rsTotal = mysql_query($sql); 
       while($rows = mysql_fetch_array($rsTotal))
@@ -507,7 +507,7 @@ if(mysql_num_rows($rsData)>0){
 		$data = Array();                
                 $start=$request['start'];
                 $limit=$request['limit'];
-		$sql = "select id, nama from eq_nama limit $start,$limit";
+		$sql = "select id, nama from eq_nama where kategori != 'Sistem' order by nama limit $start,$limit";
 		$rsData = mysql_query($sql); 
 if(mysql_num_rows($rsData)>0){
       while($rows = mysql_fetch_array($rsData))
@@ -532,7 +532,8 @@ if(mysql_num_rows($rsData)>0){
 }
   function getcmbeventgrup05($request){
 
-		$sql = "select count(*) from equipment"; 
+		$sql = "select count(*) from equipment inner join eq_nama on eq_nama.id=equipment.nama_id
+                where eq_nama.grup=1 and eq_nama.kategori='Sistem'"; 
 		$data = array();
 		$rsTotal = mysql_query($sql); 
       while($rows = mysql_fetch_array($rsTotal))
@@ -541,7 +542,7 @@ if(mysql_num_rows($rsData)>0){
                 $start=$request['start'];
                 $limit=$request['limit'];
 		$sql = "select equipment.id, concat(eq_nama.nama, '-', sn, '-', model) as grup from equipment inner join eq_nama on eq_nama.id=equipment.nama_id
-                where eq_nama.grup=1 limit $start,$limit";
+                where eq_nama.grup=1 and eq_nama.kategori='Sistem'limit $start,$limit";
 		$rsData = mysql_query($sql); 
 if(mysql_num_rows($rsData)>0){
       while($rows = mysql_fetch_array($rsData))
